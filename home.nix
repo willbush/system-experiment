@@ -4,7 +4,7 @@
     homeDirectory = "/home/will";
   };
 
-  home.packages = with pkgs; [ xclip tree ripgrep ];
+  home.packages = with pkgs; [ wl-clipboard-rs tree ripgrep ];
 
   programs = {
     home-manager.enable = true;
