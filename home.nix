@@ -32,18 +32,20 @@
 
   };
 
-  wayland.windowManager.sway = {
-    enable = true;
-    config = rec {
-      modifier = "Mod4"; # Super key
-      terminal = "alacritty";
-      output = {
-        "Virtual-1" = {
-          mode = "1920x1080@60Hz";
-        };
-      };
-    };
-  };
+  wayland.windowManager.hyprland.enable = true;
+
+  # wayland.windowManager.sway = {
+  #   enable = true;
+  #   config = rec {
+  #     modifier = "Mod4"; # Super key
+  #     terminal = "alacritty";
+  #     output = {
+  #       "Virtual-1" = {
+  #         mode = "1920x1080@60Hz";
+  #       };
+  #     };
+  #   };
+  # };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
