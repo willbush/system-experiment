@@ -53,6 +53,7 @@
   };
 
   programs.zsh.enable = true;
+  programs.sway.enable = true;
 
   fonts.packages = with pkgs; [
     fira-mono
