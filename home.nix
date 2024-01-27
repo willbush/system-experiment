@@ -4,7 +4,7 @@
     homeDirectory = "/home/will";
   };
 
-  home.packages = with pkgs; [ wl-clipboard-rs tree ripgrep ];
+  home.packages = with pkgs; [ wl-clipboard-rs tree ripgrep firefox ];
 
   programs = {
     home-manager.enable = true;
@@ -39,7 +39,6 @@
       bind =
         [
           "$mod, F, exec, firefox"
-          ", Print, exec, grimblast copy area"
         ]
         ++ (
           # workspaces
