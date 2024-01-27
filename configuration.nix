@@ -40,6 +40,10 @@ in
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # wayland-related
+  security.polkit.enable = true;
+  hardware.opengl.enable = true; # when using QEMU KVM
+
   users.mutableUsers = false;
 
   users.users = {
