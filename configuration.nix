@@ -54,15 +54,6 @@
 
   programs.zsh.enable = true;
 
-  # Enables copy / paste when running in a KVM with spice.
-  services.spice-vdagentd.enable = true;
-
-  services.xserver = {
-    enable = true;
-    desktopManager.plasma5.enable = true;
-    displayManager.sddm.enable = true;
-  };
-
   fonts.packages = with pkgs; [
     fira-mono
     hack-font
