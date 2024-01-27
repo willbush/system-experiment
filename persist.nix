@@ -18,6 +18,7 @@
         ".local/share/sddm"
         ".local/share/zoxide"
         "Downloads"
+        "code"
       ];
       files = [
         ".bash_history"
