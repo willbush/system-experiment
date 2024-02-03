@@ -8,7 +8,6 @@
 
   programs = {
     home-manager.enable = true;
-    git.enable = true;
 
     alacritty.enable = true;
     fzf.enable = true; # enables zsh integration by default
@@ -30,6 +29,52 @@
       enableZshIntegration = true;
     };
 
+    git = {
+      enable = true;
+      userName = "Will Bush";
+      userEmail = "will.g.bush@gmail.com";
+      signing = {
+        # public key fingerprint
+        key = "4441422E61E4C8F3EBFE5E333823864B54B13BDA";
+        signByDefault = true;
+      };
+
+      extraConfig = {
+        core.autocrlf = "input";
+        init.defaultBranch = "main";
+        merge.conflictstyle = "zdiff3";
+        pull.rebase = false;
+        push.autoSetupRemote = true;
+      };
+
+      difftastic.enable = true;
+    };
+
+    ssh = {
+      enable = true;
+      serverAliveInterval = 30;
+      matchBlocks = {
+        "github" = {
+          hostname = "github.com";
+          identityFile = "~/.secrets/id_ed25519_github_will";
+        };
+      };
+    };
+
+    gpg.enable = true;
+  };
+
+  services = {
+    gpg-agent = {
+      enable = true;
+      enableSshSupport = true;
+      pinentryFlavor = "qt";
+
+      defaultCacheTtl = 10800; # 3 hours
+      defaultCacheTtlSsh = 10800;
+      maxCacheTtl = 21600; # 6 hours
+      maxCacheTtlSsh = 21600;
+    };
   };
 
   wayland.windowManager.hyprland = {
