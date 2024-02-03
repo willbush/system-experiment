@@ -19,6 +19,8 @@
         ".local/share/zoxide"
         "Downloads"
         "code"
+        { directory = ".gnupg"; mode = "0700"; }
+        { directory = ".secrets"; mode = "0700"; }
       ];
       files = [
         ".bash_history"
