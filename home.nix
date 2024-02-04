@@ -9,6 +9,7 @@
   programs = {
     home-manager.enable = true;
 
+    wofi.enable = true;
     alacritty.enable = true;
     fzf.enable = true; # enables zsh integration by default
     starship.enable = true;
