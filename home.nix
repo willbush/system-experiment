@@ -81,45 +81,38 @@
     enable = true;
     settings = {
       "$mod" = "SUPER";
+
       bind =
         [
-          "$mod, F, exec, firefox"
-        ]
-        ++ (
-          # workspaces
-          # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
-          builtins.concatLists (builtins.genList
-            (
-              x:
-              let
-                ws =
-                  let
-                    c = (x + 1) / 10;
-                  in
-                  builtins.toString (x + 1 - (c * 10));
-              in
-              [
-                "$mod, ${ws}, workspace, ${toString (x + 1)}"
-                "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-              ]
-            )
-            10)
-        );
+          # These are Colemak-DH keys. I don't dedicated number row unless I go
+          # through a layer key. So I rather use keys close to the home row.
+
+          # binds $mod + {q..g} to workspace {q..g}
+          "$mod, q, workspace, 1"
+          "$mod, w, workspace, 2"
+          "$mod, f, workspace, 3"
+          "$mod, p, workspace, 4"
+          "$mod, b, workspace, 5"
+          "$mod, a, workspace, 6"
+          "$mod, r, workspace, 7"
+          "$mod, s, workspace, 8"
+          "$mod, t, workspace, 9"
+          "$mod, g, workspace, 10"
+
+          # binds $mod + shift + {q..g} to move to workspace {q..g}
+          "$mod SHIFT, q, movetoworkspace, 1"
+          "$mod SHIFT, w, movetoworkspace, 2"
+          "$mod SHIFT, f, movetoworkspace, 3"
+          "$mod SHIFT, p, movetoworkspace, 4"
+          "$mod SHIFT, b, movetoworkspace, 5"
+          "$mod SHIFT, a, movetoworkspace, 6"
+          "$mod SHIFT, r, movetoworkspace, 7"
+          "$mod SHIFT, s, movetoworkspace, 8"
+          "$mod SHIFT, t, movetoworkspace, 9"
+          "$mod SHIFT, g, movetoworkspace, 10"
+        ];
     };
   };
-
-  # wayland.windowManager.sway = {
-  #   enable = true;
-  #   config = rec {
-  #     modifier = "Mod4"; # Super key
-  #     terminal = "alacritty";
-  #     output = {
-  #       "Virtual-1" = {
-  #         mode = "1920x1080@60Hz";
-  #       };
-  #     };
-  #   };
-  # };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
