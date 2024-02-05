@@ -5,7 +5,7 @@ in
   imports = [
     ./hardware-configuration.nix
     ./persist.nix
-    # ./greetd.nix
+    ./greetd.nix
   ];
 
   # This will add each flake input as a registry

@@ -8,12 +8,12 @@
           --time \
           --asterisks \
           --user-menu \
-          --cmd sway
+          --cmd Hyprland
       '';
     };
   };
 
-  environment.etc."greetd/environments".text = ''
-    sway
-  '';
+  # environment.etc."greetd/environments".text = ''
+  #   sway
+  # '';
 }
