@@ -3,9 +3,10 @@
   environment.persistence."/nix/persist" = {
     hideMounts = true;
     directories = [
-      "/var/log"
-      "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
+      "/var/cache/tuigreet"
+      "/var/lib/systemd/coredump"
+      "/var/log"
     ];
     files = [
       # machine-id is used by systemd for the journal, if you don't persist this
