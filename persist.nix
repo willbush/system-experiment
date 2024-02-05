@@ -22,6 +22,7 @@
         "code"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".secrets"; mode = "0700"; }
+        { directory = ".ssh"; mode = "0700"; }
       ];
       files = [
         ".bash_history"
