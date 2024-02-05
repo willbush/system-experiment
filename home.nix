@@ -66,6 +66,9 @@
   };
 
   services = {
+    # lightweight notification daemon for Wayland
+    mako.enable = true;
+
     gpg-agent = {
       enable = true;
       enableSshSupport = true;
