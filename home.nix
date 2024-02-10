@@ -1,8 +1,11 @@
 { pkgs, ... }: {
+
   home = {
     username = "will";
     homeDirectory = "/home/will";
   };
+
+  imports = [ ./emacs.nix ];
 
   home.packages = with pkgs; [ wl-clipboard-rs tree ripgrep firefox ];
 

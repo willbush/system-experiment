@@ -29,6 +29,12 @@ in
     wireplumber.enable = true;
   };
 
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs-unstable;
+    defaultEditor = true;
+  };
+
   # wayland-related
   security.polkit.enable = true;
   hardware.opengl.enable = true; # when using QEMU KVM
