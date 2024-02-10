@@ -5,13 +5,10 @@ in
   imports = [
     ./greetd.nix
     ./hardware-configuration.nix
+    ./nix-settings.nix
     ./persist.nix
   ];
 
-  nix.settings = {
-    experimental-features = "nix-command flakes";
-    auto-optimise-store = true;
-  };
 
   networking.hostName = "blitzar";
   networking.networkmanager.enable = true;

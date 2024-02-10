@@ -1,5 +1,93 @@
 {
   "nodes": {
+    "chemacs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674216959,
+        "narHash": "sha256-/WtacZPr45lurS0hv+W8UGzsXY3RujkU5oGGGqjqG0Q=",
+        "owner": "plexus",
+        "repo": "chemacs2",
+        "rev": "c2d700b784c793cc82131ef86323801b8d6e67bb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "plexus",
+        "repo": "chemacs2",
+        "type": "github"
+      }
+    },
+    "copilot-el": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707055282,
+        "narHash": "sha256-Drx2bB/Uiq0Alm8d575eucQrK6erFy4Z0KXsL5RsFaY=",
+        "owner": "zerolfx",
+        "repo": "copilot.el",
+        "rev": "22f0446a17753716456e0cb8ee33f47731fc4ec3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zerolfx",
+        "repo": "copilot.el",
+        "type": "github"
+      }
+    },
+    "crafted-emacs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707518136,
+        "narHash": "sha256-pKpEf7pV11rN7u/b3GVuhdSBdMIatvPREs7EM/FzB3Y=",
+        "owner": "SystemCrafters",
+        "repo": "crafted-emacs",
+        "rev": "bc094c618afcc70940d852812223aa7c42e59692",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SystemCrafters",
+        "repo": "crafted-emacs",
+        "type": "github"
+      }
+    },
+    "emacs-overlay": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixpkgs-stable": "nixpkgs-stable"
+      },
+      "locked": {
+        "lastModified": 1707555888,
+        "narHash": "sha256-opXjVZpavvfMFzv9c+teipFQ2zDs6+CX7KOQE8uhuHc=",
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "rev": "22cce99b0abb79c5d00583f6f82e823b2bdb131b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "emacs-overlay",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1705309234,
+        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -51,11 +139,46 @@
         "type": "github"
       }
     },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1707347730,
+        "narHash": "sha256-0etC/exQIaqC9vliKhc3eZE2Mm2wgLa0tj93ZF/egvM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6832d0d99649db3d65a0e15fa51471537b2c56a6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "chemacs": "chemacs",
+        "copilot-el": "copilot-el",
+        "crafted-emacs": "crafted-emacs",
+        "emacs-overlay": "emacs-overlay",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     }
   },
