@@ -72,8 +72,6 @@
     # lightweight notification daemon for Wayland
     mako.enable = true;
 
-    network-manager-applet.enable = true;
-
     gpg-agent = {
       enable = true;
       enableSshSupport = true;
