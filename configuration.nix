@@ -55,10 +55,17 @@ in
   programs.zsh.enable = true;
 
   fonts.packages = with pkgs; [
+    dejavu_fonts
+    emacs-all-the-icons-fonts
     fira-mono
     hack-font
     inconsolata
     iosevka
+    liberation_ttf
+    libre-baskerville
+    powerline-fonts
+    source-code-pro
+    ubuntu_font_family
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
