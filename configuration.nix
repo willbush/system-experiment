@@ -63,6 +63,7 @@ in
     iosevka
     liberation_ttf
     libre-baskerville
+    nerdfonts
     powerline-fonts
     source-code-pro
     ubuntu_font_family
