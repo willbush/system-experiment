@@ -18,15 +18,16 @@
       directories = [
         ".local/share/sddm"
         ".local/share/zoxide"
+        ".local/share/zsh"
         "Downloads"
         "code"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".secrets"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
+        { directory = ".password-store"; mode = "0700"; }
       ];
       files = [
         ".bash_history"
-        ".zsh_history"
       ];
     };
   };
