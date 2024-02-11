@@ -7,7 +7,60 @@
 
   imports = [ ./emacs.nix ];
 
-  home.packages = with pkgs; [ wl-clipboard-rs tree ripgrep firefox ];
+  home.packages = with pkgs; [
+    wl-clipboard-rs
+    firefox
+
+    # core
+    curl
+    eza
+    fd
+    ripgrep
+    tree
+    wget
+
+    # dev
+    delta
+    gh
+    nixfmt
+    nixpkgs-fmt
+    nodePackages.prettier
+    nodejs # for copilot.el login
+    python311
+    python311Packages.grip # markdown preview
+    python311Packages.pip
+    shfmt
+    xq # jq in rust
+
+    # network
+    dnsutils
+    openconnect
+    rustscan
+    xh
+
+    # security
+    git-crypt
+    gopass
+
+    # compressor / archiver packages
+    p7zip
+    unar
+    unzip
+    zip
+
+    # tui utils
+    btop
+    glances
+    # zenith #broken
+
+    # other utils
+    du-dust
+    file
+    hyperfine # benchmarking tool
+    tealdeer # tldr in Rust
+    trash-cli
+    usbutils
+  ];
 
   programs = {
     home-manager.enable = true;
